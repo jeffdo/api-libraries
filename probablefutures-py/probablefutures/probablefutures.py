@@ -1,5 +1,5 @@
 import requests
-import input
+import probablefutures.input as input
 
 
 class ProbableFutures:
@@ -32,7 +32,7 @@ class ProbableFutures:
         if query is None:
             query = input.build_query(input_fields=input_fields, output_fields=output_fields)
 
-        print(query)
+        # print(query)
         headers = {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + self._access_token

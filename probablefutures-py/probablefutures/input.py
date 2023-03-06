@@ -15,12 +15,12 @@ QUERY_TEMPLATE = """mutation {{
 
 
 def get_group(matchobj):
-    print(matchobj.group(2))
+    # print(matchobj.group(2))
     if matchobj.group(2) == '':
-        print('value')
+        # print('value')
         return matchobj.group(0)
     else:
-        print('key')
+        # print('key')
         return matchobj.group(1) + matchobj.group(2)
 
 

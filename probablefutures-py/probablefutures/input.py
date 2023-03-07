@@ -31,8 +31,8 @@ def build_query(input_fields={}, output_fields=[]):
 @dataclass
 class Input:
 
-    longitude: str
-    latitude: str
+    longitude: float
+    latitude: float
     country: str
     city: str
     address: str

@@ -15,12 +15,9 @@ QUERY_TEMPLATE = """mutation {{
 
 
 def get_group(matchobj):
-    # print(matchobj.group(2))
     if matchobj.group(2) == '':
-        # print('value')
         return matchobj.group(0)
     else:
-        # print('key')
         return matchobj.group(1) + matchobj.group(2)
 
 
@@ -34,8 +31,8 @@ def build_query(input_fields={}, output_fields=[]):
 @dataclass
 class Input:
 
-    lon: str
-    lat: str
+    longitude: str
+    latitude: str
     country: str
     city: str
     address: str

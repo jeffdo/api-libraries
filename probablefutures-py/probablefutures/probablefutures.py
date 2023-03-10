@@ -46,6 +46,10 @@ class ProbableFutures:
         # try to reconnect automatically when the jwt token expires
         if "jwt expired" in response.text:
             self.connect()
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + self._access_token
+            }
             response = requests.post('https://graphql.probablefutures.org/graphql', headers=headers, json=gql_query)
 
         return response
